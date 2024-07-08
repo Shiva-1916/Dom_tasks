@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="change()">  
+        on/off
+    </button>
+    <img  id="img_1">
+
+
+
+    <script>
+   img1 = document.getElementById("img_1")
+   flag = false
+  function change(){
+    if (flag==false){
+    img1.src = "https://static.vecteezy.com/system/resources/previews/012/482/252/original/animated-line-bulb-lamp-for-brain-and-innovation-idea-icon-symbol-in-illustration-vector.jpg"
+    img1.width = "100"
+    flag = true
+   }
+   else {
+    img1.src = "https://static.vecteezy.com/system/resources/thumbnails/022/454/190/small/animated-mono-light-bulb-brainstorm-session-electricity-black-and-white-thin-line-icon-4k-footage-for-web-design-monochromatic-isolated-flat-object-animation-with-alpha-channel-transparency-video.jpg"
+    img1.width = "200"
+    flag = false
+   }
+  }
+
+
+
+
+    </script>
+</body>
+</html>

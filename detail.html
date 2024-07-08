@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-evenly;
+        
+}
+
+p {
+  text-align: justify;
+}
+img:hover {
+transform: scale(1.2,1.2);
+}
+
+button:hover{
+transition-duration: 3s;
+  background-color: white;
+  transform: translate(100px)
+}
+
+    div div {
+    position: relative;
+    width: 19%;
+    text-align: center;
+    vertical-align: top;
+    padding: 2%;
+    border: 2px solid grey;
+    margin-bottom: 1%;
+  }
+
+  button {
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.747);
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    right: 120px;
+    width: 100px;
+  }
+
+
+  .st:hover {
+    box-shadow: 3px 3px 2px black;
+  } 
+  </style>
+</head>
+<body>
+    <img src="" alt="" id="img1">
+
+
+    <script>
+        res = localStorage.getItem("image")
+d1 = JSON.parse(res)
+console.log(d1);
+
+
+main_div = document.createElement("div")
+main_div.setAttribute("class","main")
+    div = document.createElement("div")
+    div.setAttribute("class","st")
+    main = document.createElement("h4")
+    main.innerText = d1["title"]
+
+    img = document.createElement("img")
+    img.setAttribute("src",d1["image"])
+    img.width = "100"
+
+  
+
+    des = document.createElement("p")
+    des.innerText = d1["description"]
+
+
+    price = document.createElement("button")
+    price.innerText = d1["price"]
+
+   
+   
+
+    
+    div.appendChild(main)
+    div.appendChild(img)
+    div.appendChild(des)
+    div.appendChild(price)
+    main_div.appendChild(div)
+
+document.body.appendChild(main_div)
+    </script>
+</body>
+</html>
